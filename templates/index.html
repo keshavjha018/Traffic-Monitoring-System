@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="../static/styles.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+
+    <title>Traffic Monitoring System</title>
+  </head>
+
+  <body>
+    <div class="landing">
+      <img src="../static/images/bg2.png" alt="Car" />
+      <div class="heading">
+        <span class="title">
+          Monitor & Analyse Traffic <br />
+          using ML based Monitoring System <br />
+        </span>
+        <p class="subtitle">Scan anywhere and with any device</p>
+        <button class="btn" onclick="scrollToSection()">Explore</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="rev-container">
+        <div class="first">
+
+          <hr class="vertical-hr" />
+
+          <div class="video">
+            <div class="video-text">
+              <span class="text-heading"> Detect from Static File </span>
+              <p class="text-subheading">
+                Upload Video or Image
+              </p>
+
+              <div>
+                <input
+                  id="imageinput"
+                  type="file"
+                  name="image"
+                  onchange="readUrl(this)"
+                />
+
+                <button name="send" class="button detectBtn" id="sendbutton"> Detect </button>
+              </div>
+
+              <!-- Download Link Btn -->
+              <div id="link">
+                <a href="" id="download" download>Download</a>
+              </div>
+
+            </div>
+            <img class="video-img" src="../static/images/Phone.png" alt="" />
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="first">
+          <div class="cam video">
+            <div class="video-text cam">
+              <span class="text-heading left-ore"> Realtime Detection </span>
+              <p class="text-subheading">Attach CCTV camera or a WebCam</p>
+              <div class="cam-btn">
+                <button name="cam" class="button webcamBtn" id="opencam">
+                  Launch Video Cam
+                </button>
+                <!-- <input type="submit" value="Open Cam"> -->
+              </div>
+            </div>
+            <img class="video-img cam" src="../static/images/cctv.png" alt="*" />
+          </div>
+
+          <hr class="vertical-hr" id="main" />
+          
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function scrollToSection() {
+        var section = document.getElementById("main");
+        window.scrollTo({
+          top: section.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
+</html>
